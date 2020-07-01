@@ -1,0 +1,51 @@
+import turtle
+import math
+pi = 3.14
+
+##Initialize
+turtle.setworldcoordinates(-2*pi-1,-5,2*pi+1,5)
+t = turtle.Turtle()
+t1 = turtle.Turtle()
+t2 = turtle.Turtle()
+t3 = turtle.Turtle()
+t.pensize(3)
+t1.pensize(3)
+t2.pensize(3)
+t3.pensize(3)
+t.pencolor('black')
+t1.pencolor('green')
+t2.pencolor('red')
+t3.pencolor('blue')
+
+##Draw Axis
+t.penup()
+t.goto(-2*pi,0)
+t.pendown()
+t.goto(2*pi,0)
+t.goto(0,0)
+t.goto(0,4)
+t.goto(0,-4)
+
+##Draw functions
+t1.pu(),t2.pu(),t3.pu()
+xn = -2*pi
+t1.goto(xn,math.sin(xn))
+t1.write("y=math.sin(x)",font=("cosolas",15,"normal"))
+t2.goto(xn,math.cos(xn))
+t2.write("y=math.cos(x)",font=("cosolas",15,"normal"))         
+t3.goto(xn,2*math.cos(2*xn))
+t3.write("y=math.2cos(2x)",font=("cosolas",15,"normal"))
+t1.pd(),t2.pd(),t3.pd()
+for x1 in range(int(-2*pi*100),int(2*pi*100),10):
+    x = x1/100
+    t1.goto(x,math.sin(x))
+    t2.goto(x,math.cos(x))
+    t3.goto(x,2*math.cos(2*x))
+    
+t.hideturtle()
+t1.hideturtle()
+t2.hideturtle()
+t3.hideturtle()
+turtle.done()
+    
+
