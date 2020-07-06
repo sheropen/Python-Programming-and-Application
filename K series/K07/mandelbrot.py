@@ -14,7 +14,7 @@ for i in range(-200,100):
         move(x,y)
         c = complex(x,y)
         z = complex(0)
-        for j in range(100):
+        for k in range(100):
             z = f(z,c)
             if(abs(z)>2):
                 flag = False
