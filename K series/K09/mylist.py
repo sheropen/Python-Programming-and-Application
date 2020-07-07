@@ -1,7 +1,7 @@
 class mylist(list):
     def product(self):
-        res = 1
-        for i in self:
+        res = self[0]
+        for i in self[1:]:
             res *= i
         return res
     def __add__(self,other):
